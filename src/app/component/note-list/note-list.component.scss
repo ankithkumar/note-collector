@@ -1,0 +1,130 @@
+@keyframes FadeIn {
+  0% {
+    opacity: 0;
+    height: 0;
+    max-height: 0;
+  }
+
+  50% {
+    opacity: 0.2;
+    max-height: 125px;
+  }
+
+  100% {
+    opacity: 1;
+    height: 250px;
+    max-height: 250px;
+  }
+}
+
+.note-container {
+  background-color: #fafbfb;
+  border: 1px solid #d1d3d3;
+  margin: 10px 0;
+  height: 450px;
+
+  .header {
+    .title-text {
+      padding: 5px 10px;
+      width: 88%;
+      font: 19px Arial;
+      color: #0d9f6e;
+      font-weight: 400;
+    }
+
+    border-bottom: 1px solid #ececec;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    .right-icons {
+      .icon {
+        padding: 5px 10px;
+        cursor: pointer;
+      }
+    }
+  }
+
+  .table-container {
+    max-height: 450px;
+    padding: 0 10px 10px 10px;
+    overflow: auto;
+    overflow: auto;
+
+    .no-notes-text {
+      padding: 10px;
+      font: 14px Helvetica;
+      color: #1b333d;
+    }
+
+    &.form-open {
+      max-height: 130px;
+    }
+
+    .row {
+      background-color: #ffffff;
+      padding: 10px;
+      cursor: pointer;
+      height: 34px;
+      padding-left: 10px;
+
+      &.content-row {
+        &:hover {
+          background-color: #dfdfdf;
+        }
+      }
+
+      td {
+        border-bottom: 1px solid #ececec;
+        font: 14px Arial;
+        color: #494e4f;
+        font-weight: 400;
+
+        &.mat-cell:first-of-type {
+          padding-left: 10px;
+        }
+
+        &.mat-cell:last-of-type {
+          padding-right: 10px;
+        }
+      }
+
+      th {
+        border-bottom: 1px solid #ececec;
+        background-color: #fafbfb;
+
+        &.mat-header-cell:first-of-type {
+          padding-left: 10px;
+        }
+
+        &.mat-header-cell:last-of-type {
+          padding-right: 10px;
+        }
+      }
+    }
+
+    .column {
+      font: 14px Helvetica;
+      color: #1b333d;
+      font-weight: 400;
+    }
+
+    .title-col {
+      width: 90%;
+    }
+
+    .time-col {
+      width: 20%;
+    }
+  }
+
+  table {
+    width: 100%;
+  }
+}
+
+.summary-container {
+  position: absolute;
+  right: 10px;
+  top: 61px;
+}

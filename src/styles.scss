@@ -1,1 +1,106 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+  font-family: Helvetica;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: Helvetica, "Helvetica Neue", Roboto, sans-serif;
+
+}
+
+.title-form {
+  .mat-form-field {
+    width: 275px;
+  }
+
+  &.text-area {
+    .mat-form-field {
+      width: 775px;
+    }
+  }
+
+  .mat-form-field-wrapper {
+    padding-bottom: 25px;
+  }
+
+  .mat-form-field-outline {
+    background-color: #fafbfb;
+    border-radius: 3px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-start {
+    border-radius: 3px 0 0 3px;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-outline-end {
+    border-radius: 0 3px 3px 0;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-flex {
+    padding: 0;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-infix {
+    padding: 10px 5px;
+    border-top: 0
+  }
+
+  &.input-name-field {
+
+    .mat-form-field-appearance-outline.mat-focused .mat-form-field-outline,
+    .mat-form-field-appearance-outline.mat-form-field-invalid .mat-form-field-outline {
+      height: 35px;
+    }
+
+    .mat-form-field-appearance-outline .mat-form-field-infix {
+      margin-top: 4px;
+    }
+  }
+
+  input,
+  textarea {
+    color: #666b6d;
+    font: 14px Helvetica;
+  }
+
+  .mat-form-field-appearance-outline .mat-form-field-subscript-wrapper {
+    padding: 0;
+    margin-top: 3px;
+  }
+}
+
+.mat-expansion-panel-body {
+  padding: 0 !important;
+}
+
+.mat-expansion-panel:not([class*=mat-elevation-z]) {
+  box-shadow: none;
+}
+
+.mat-checkbox-checked.mat-accent .mat-checkbox-background,
+.mat-checkbox-indeterminate.mat-accent .mat-checkbox-background {
+  background-color: #ffffff;
+}
+
+.mat-checkbox-frame {
+  border-color: white;
+}
+
+.mat-checkbox-checkmark-path {
+  stroke: black !important;
+}
+
+.mat-error {
+  color: #f1f1f1;
+}

@@ -1,0 +1,47 @@
+<div class="note-form">
+  <span class="material-icons collapse-icon" (click)="handleFormClose()">
+    arrow_drop_up
+  </span>
+  <div class="left-section">
+    <div class="title-text">
+      Create or Edit
+    </div>
+  </div>
+  <div class="form-container">
+    <form [formGroup]="noteForm">
+      <div class="title-form input-name-field">
+        <div class="form-header-text">Title</div>
+        <mat-form-field floatLabel="never" appearance="outline" [hideRequiredMarker]="false">
+          <input type="text" formControlName="name" matInput placeholder="enter title of note" />
+          <mat-error *ngIf="noteForm.get('name').hasError('required') && noteForm.controls['name'].touched">Title is
+            required</mat-error>
+        </mat-form-field>
+
+        <div class="editable-check">
+          <div class="checkbox-header-text form-header-text">
+            Editable?
+          </div>
+          <mat-checkbox formControlName="editable"></mat-checkbox>
+          <span class="checkbox-val form-header-text">
+            {{ noteForm.get('editable').value ? 'yes' : 'no' }}
+          </span>
+        </div>
+      </div>
+      <div class="title-form text-area">
+        <div class="form-header-text">Text</div>
+        <mat-form-field floatLabel="never" appearance="outline">
+          <textarea type="text" formControlName="desc" placeholder="description of note" matInput cdkTextareaAutosize
+            cdkAutosizeMinRows="6" cdkAutosizeMaxRows="6">
+        </textarea>
+          <mat-error *ngIf="noteForm.get('desc').hasError('required') && noteForm.controls['desc'].touched">Description
+            is
+            required</mat-error>
+        </mat-form-field>
+        <button class="submit-button" mat-button [disabled]="noteForm.invalid || !noteForm.get('editable').value"
+          (click)="onFormSubmit()">
+          Save
+        </button>
+      </div>
+    </form>
+  </div>
+</div>

@@ -1,0 +1,21 @@
+.app-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+
+  .pr-header {
+    font: 26px Arial;
+    font-weight: 400;
+    color: #ffffff;
+    padding: 5px;
+    background-color: #919595;
+    width: 100%;
+  }
+
+  .container {
+    padding: 10px;
+    background-color: #ebebeb;
+    min-height: calc(100vh - 70px);
+  }
+
+}

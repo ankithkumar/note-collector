@@ -1,0 +1,64 @@
+.collapse-icon {
+  transform: rotate(45deg);
+  position: absolute;
+  right: 20px;
+  top: 100px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.note-form {
+  background-color: #26add2;
+  margin: 0 10px;
+  padding: 10px;
+  display: flex;
+  margin-top: 5px;
+  border-bottom: 1px solid #0588ac;
+  height: 228px;
+
+  .left-section {
+    width: 150px;
+    margin-right: 35px;
+
+    .title-text {
+      font: 24px Helvetica;
+      color: #f1f1f1;
+    }
+  }
+
+  .form-container {
+    width: 775px;
+
+    .form-header-text {
+      font: 14px Helvetica;
+      color: #f1f1f1;
+    }
+
+    .title-form {
+      .editable-check {
+        display: flex;
+        width: 135px;
+        align-items: center;
+        float: right;
+
+        .checkbox-header-text {
+          margin-right: 20px;
+        }
+
+        .checkbox-val {
+          margin-left: 20px
+        }
+      }
+
+      .submit-button {
+        position: relative;
+        top: -73px;
+        left: 795px;
+        cursor: pointer;
+        padding: 10px 18px;
+        font: 18px Helvetica;
+        color: #474e4f;
+      }
+    }
+  }
+}

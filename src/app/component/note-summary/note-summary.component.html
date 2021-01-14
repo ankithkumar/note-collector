@@ -1,0 +1,29 @@
+<span class="material-icons collapse-icon" (click)="handleSummaryClose()">
+  arrow_drop_up
+</span>
+<div class="summary-container">
+  <div class="summary">
+    <div class="title-text">
+      Summary
+    </div>
+    <div class="body no-summary" *ngIf="!summary">
+      Nothing to show so far
+    </div>
+    <div class="body" *ngIf="summary">
+      <div class="left-section">
+        <span class="length">{{ summary.notesLength }}</span>
+        <span class="notes-text">{{ summary.notesLength > 1 ? 'notes' : 'note'}}</span>
+      </div>
+      <div class="right-section" *ngIf="summary.latestUpdateNote">
+        <div class="last-updated-time-container">
+          <div class="last-updated-time-text">last updated</div>
+          <div class="last-updated-time">{{summary.latestUpdateNote.Updated | date: 'dd/MM/yyyy H:mm:ss'}}</div>
+        </div>
+        <div class="last-updated-note-container">
+          <div class="last-updated-note-text">last note updated</div>
+          <div class="last-updated-note">#{{summary.latestUpdateNote.id}}-'{{summary.latestUpdateNote.Name}}'</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
